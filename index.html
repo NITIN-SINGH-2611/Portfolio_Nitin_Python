@@ -3,37 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nitin Singh Samant - Python Backend Engineer | FastAPI | AI-Assisted Development</title>
+    <title>Nitin Singh Samant - Python AI Backend Engineer | Generative AI Engineer</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Sora:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 </head>
 <body>
-    <!-- Animated Starfield Background -->
-    <div class="starfield">
-        <div class="starfield-layer starfield-layer-1"></div>
-        <div class="starfield-layer starfield-layer-2"></div>
-        <div class="starfield-layer starfield-layer-3"></div>
+    <!-- Loading Screen -->
+    <div class="loader" id="loader">
+        <div class="loader-inner">
+            <div class="loader-line"></div>
+            <span class="loader-text">NITIN SINGH SAMANT</span>
+        </div>
     </div>
-    
+
+    <!-- Custom Cursor -->
+    <div class="cursor" id="cursor"></div>
+    <div class="cursor-follower" id="cursorFollower"></div>
+
+    <!-- Noise Overlay -->
+    <div class="noise-overlay"></div>
+
     <!-- Navigation -->
-    <nav class="navbar">
-        <div class="container">
-            <div class="logo">
-                <a href="#home" class="logo-link">Nitin Singh Samant</a>
-            </div>
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#home" class="nav-logo" data-magnetic>NS</a>
             <ul class="nav-menu" id="navMenu">
-                <li><a href="#home" class="nav-link">Home</a></li>
-                <li><a href="#about" class="nav-link">About</a></li>
-                <li><a href="#experience" class="nav-link">Experience</a></li>
-                <li><a href="#education" class="nav-link">Education</a></li>
-                <li><a href="#skills" class="nav-link">Skills</a></li>
-                <li><a href="#projects" class="nav-link">Projects</a></li>
-                <li><a href="#certifications" class="nav-link">Certifications</a></li>
-                <li><a href="#contact" class="nav-link">Contact</a></li>
+                <li><a href="#home" class="nav-link" data-magnetic>Home</a></li>
+                <li><a href="#about" class="nav-link" data-magnetic>About</a></li>
+                <li><a href="#experience" class="nav-link" data-magnetic>Experience</a></li>
+                <li><a href="#skills" class="nav-link" data-magnetic>Skills</a></li>
+                <li><a href="#projects" class="nav-link" data-magnetic>Projects</a></li>
+                <li><a href="#contact" class="nav-link" data-magnetic>Contact</a></li>
             </ul>
-            <div class="hamburger" id="hamburger">
-                <span></span>
+            <div class="hamburger" id="hamburger" data-magnetic>
                 <span></span>
                 <span></span>
             </div>
@@ -42,82 +48,125 @@
 
     <!-- Hero Section -->
     <section id="home" class="hero">
-        <div class="hero-content">
-            <div class="hero-text">
-                <h1 class="hero-title">
-                    <span class="greeting">Hello, I'm</span>
-                    <span class="name">Nitin Singh Samant</span>
-                </h1>
-                <p class="hero-subtitle">Python Backend Engineer — FastAPI — AI-Assisted Development (Cursor)</p>
-                <p class="hero-description">Python Backend Engineer with 3 years of experience building scalable backend systems, REST APIs, and automation solutions for enterprise environments. Strong expertise in FastAPI-based microservices, distributed system monitoring, and production-grade automation pipelines. Experienced in Generative AI and LLM integration, building AI-powered developer tools using OpenAI APIs and Cursor AI.</p>
-                <div class="hero-buttons">
-                    <a href="NITIN_RESUME.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-secondary resume-btn" download="Nitin_Singh_Samant_Resume.pdf">
-                        <i class="fas fa-file-pdf"></i> Download Resume
-                    </a>
-                    <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+        <div class="hero-bg-shapes">
+            <div class="gradient-blob blob-1"></div>
+            <div class="gradient-blob blob-2"></div>
+            <div class="gradient-blob blob-3"></div>
+        </div>
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-overline reveal-text">
+                    <span>PYTHON AI BACKEND ENGINEER</span>
                 </div>
-                <div class="social-links">
-                    <a href="https://www.linkedin.com/in/nitin-singh-samant-1a4227301" target="_blank" rel="noopener noreferrer" class="social-link">
-                        <i class="fab fa-linkedin"></i>
+                <h1 class="hero-title">
+                    <span class="title-line title-greeting reveal-text"><span>Hello, I'm</span></span>
+                    <span class="title-line title-name reveal-text"><span>Nitin Singh<br>Samant</span></span>
+                </h1>
+                <p class="hero-description reveal-up">
+                    Python AI Backend Engineer with nearly 3 years of experience building 
+                    scalable backend systems, REST APIs, automation workflows, and 
+                    AI-powered engineering solutions using FastAPI, LLMs, and generative AI.
+                </p>
+                <div class="hero-actions reveal-up">
+                    <a href="NITIN_RESUME.pdf" target="_blank" rel="noopener noreferrer" class="btn-magnetic" data-magnetic download="Nitin_Singh_Samant_Python_Resume.pdf">
+                        <span class="btn-text"><i class="fas fa-arrow-down"></i> Resume</span>
                     </a>
-                    <a href="mailto:19BCS2408@gmail.com" class="social-link">
+                    <a href="#contact" class="btn-magnetic btn-outline" data-magnetic>
+                        <span class="btn-text">Let's Talk</span>
+                    </a>
+                </div>
+                <div class="hero-social reveal-up">
+                    <a href="https://www.linkedin.com/in/nitin-singh-samant-1a4227301" target="_blank" rel="noopener noreferrer" class="social-icon" data-magnetic>
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="mailto:19BCS2408@gmail.com" class="social-icon" data-magnetic>
                         <i class="fas fa-envelope"></i>
                     </a>
                 </div>
             </div>
-            <div class="hero-image">
-                <div class="image-placeholder">
-                    <img src="profile-picture.jfif" alt="Nitin Singh Samant" class="profile-image" onerror="this.style.display='none'; this.parentElement.innerHTML='<i class=\'fab fa-python\' style=\'font-size:6rem; color:white;\'></i>';">
+            <div class="hero-visual reveal-up">
+                <div class="hero-image-wrapper">
+                    <div class="hero-image-border"></div>
+                    <img src="profile-picture.jfif" alt="Nitin Singh Samant" class="hero-image">
+                </div>
+                <div class="hero-status">
+                    <div class="status-dot"></div>
+                    <span>Available for opportunities</span>
                 </div>
             </div>
         </div>
-        <div class="scroll-indicator">
-            <a href="#about">
-                <i class="fas fa-chevron-down"></i>
+        <div class="scroll-cta">
+            <a href="#about" class="scroll-text">
+                <span>Scroll</span>
+                <div class="scroll-line"></div>
             </a>
         </div>
     </section>
 
+    <!-- Marquee Section -->
+    <div class="marquee-section">
+        <div class="marquee-track">
+            <div class="marquee-content">
+                <span>PYTHON</span><span class="marquee-dot"></span>
+                <span>FASTAPI</span><span class="marquee-dot"></span>
+                <span>LANGCHAIN</span><span class="marquee-dot"></span>
+                <span>RAG</span><span class="marquee-dot"></span>
+                <span>OPENAI API</span><span class="marquee-dot"></span>
+                <span>PROMPT ENGINEERING</span><span class="marquee-dot"></span>
+                <span>VECTOR DB</span><span class="marquee-dot"></span>
+                <span>DOCKER</span><span class="marquee-dot"></span>
+                <span>CI/CD</span><span class="marquee-dot"></span>
+                <span>PYTHON</span><span class="marquee-dot"></span>
+                <span>FASTAPI</span><span class="marquee-dot"></span>
+                <span>LANGCHAIN</span><span class="marquee-dot"></span>
+                <span>RAG</span><span class="marquee-dot"></span>
+                <span>OPENAI API</span><span class="marquee-dot"></span>
+                <span>PROMPT ENGINEERING</span><span class="marquee-dot"></span>
+                <span>VECTOR DB</span><span class="marquee-dot"></span>
+                <span>DOCKER</span><span class="marquee-dot"></span>
+                <span>CI/CD</span><span class="marquee-dot"></span>
+            </div>
+        </div>
+    </div>
+
     <!-- About Section -->
-    <section id="about" class="about">
+    <section id="about" class="section about-section">
         <div class="container">
-            <h2 class="section-title">About Me</h2>
-            <div class="about-content">
-                <div class="about-text">
-                    <p>
-                        Python Backend Engineer with 3 years of experience building scalable backend systems, REST APIs, and 
-                        automation solutions for enterprise environments. Strong expertise in FastAPI-based microservices, 
-                        distributed system monitoring, and production-grade automation pipelines.
+            <div class="section-header">
+                <span class="section-label reveal-text"><span>01 / ABOUT</span></span>
+                <h2 class="section-title reveal-text"><span>Who I Am</span></h2>
+            </div>
+            <div class="about-grid">
+                <div class="about-text-col">
+                    <p class="about-lead reveal-up">
+                        Python AI Backend Engineer with nearly 3 years of experience building scalable 
+                        backend systems, REST APIs, automation workflows, and AI-powered engineering solutions.
                     </p>
-                    <p>
-                        Experienced in Generative AI and LLM integration, building AI-powered developer tools and log analysis 
-                        systems using OpenAI APIs and Cursor AI. Proven ability to leverage AI-assisted development workflows 
-                        to accelerate debugging, code generation, and system optimization.
+                    <p class="about-body reveal-up">
+                        Hands-on experience in Python backend development, API engineering, automation scripting, 
+                        data processing pipelines, and AI-assisted development using LLMs, prompt engineering, 
+                        and generative AI workflows.
                     </p>
-                    <p>
-                        Strong focus on building Python-first backend systems integrated with modern AI-driven engineering practices.
+                    <p class="about-body reveal-up">
+                        Skilled in developing intelligent applications using FastAPI, OpenAI APIs, LangChain, 
+                        vector databases, backend orchestration, debugging, system optimization, and production support.
                     </p>
-                    <p>
-                        <strong>Date of Birth:</strong> November 26, 2001
-                    </p>
-                    <div class="about-stats">
-                        <div class="stat-item">
-                            <h3>06+</h3>
-                            <p>Projects Completed</p>
-                        </div>
-                        <div class="stat-item">
-                            <h3>3+</h3>
-                            <p>Years Experience</p>
-                        </div>
-                        <div class="stat-item">
-                            <h3>5+</h3>
-                            <p>Production Utilities</p>
-                        </div>
-                    </div>
                 </div>
-                <div class="about-image">
-                    <div class="image-card">
-                        <img src="profile-picture.jfif" alt="Nitin Singh Samant" class="profile-image-about" onerror="this.style.display='none'; this.parentElement.innerHTML='<i class=\'fab fa-python\' style=\'font-size:5rem; color:white;\'></i>';">
+                <div class="about-stats-col">
+                    <div class="stat-card reveal-up" data-tilt>
+                        <span class="stat-number" data-count="3">0</span>
+                        <span class="stat-plus">+</span>
+                        <span class="stat-label">Years Experience</span>
+                    </div>
+                    <div class="stat-card reveal-up" data-tilt>
+                        <span class="stat-number" data-count="6">0</span>
+                        <span class="stat-plus">+</span>
+                        <span class="stat-label">Projects Delivered</span>
+                    </div>
+                    <div class="stat-card reveal-up" data-tilt>
+                        <span class="stat-number" data-count="10">0</span>
+                        <span class="stat-plus">+</span>
+                        <span class="stat-label">APIs &amp; Pipelines Built</span>
                     </div>
                 </div>
             </div>
@@ -125,200 +174,166 @@
     </section>
 
     <!-- Experience Section -->
-    <section id="experience" class="experience-section">
+    <section id="experience" class="section experience-section">
         <div class="container">
-            <h2 class="section-title">Professional Experience</h2>
-            <div class="experience-timeline">
+            <div class="section-header">
+                <span class="section-label reveal-text"><span>02 / EXPERIENCE</span></span>
+                <h2 class="section-title reveal-text"><span>Where I've Worked</span></h2>
+            </div>
 
+            <div class="timeline">
                 <!-- SDE I -->
-                <div class="experience-item">
-                    <div class="experience-header">
-                        <div class="experience-company">
-                            <h3>Jio Platforms Ltd.</h3>
-                            <span class="experience-role">Software Development Engineer I</span>
-                            <span class="experience-period">June 2024 – Present</span>
-                            <span class="experience-mode">Navi Mumbai</span>
-                        </div>
-                        <div class="tech-stack">
-                            <span>Python</span><span>FastAPI</span><span>REST APIs</span><span>React</span><span>SQL</span><span>Linux</span>
-                        </div>
+                <div class="timeline-item reveal-up" data-tilt>
+                    <div class="timeline-marker">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-line"></div>
                     </div>
-                    <div class="experience-content">
-                        <div class="experience-project">
-                            <h4><i class="fas fa-chart-bar"></i> Python-based EDA Pipelines</h4>
-                            <p>Built Python-based EDA pipelines processing large-scale production defect datasets, reducing root-cause analysis time by <strong>40%</strong>.</p>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <div>
+                                <h3 class="timeline-role">Software Development Engineer I</h3>
+                                <span class="timeline-company">Jio Platforms Ltd.</span>
+                            </div>
+                            <span class="timeline-date">Jun 2024 — Present</span>
                         </div>
-                        <div class="experience-project">
-                            <h4><i class="fas fa-server"></i> Scalable Backend Services</h4>
-                            <p>Designed and developed scalable backend services using FastAPI for enterprise network provisioning workflows.</p>
+                        <div class="timeline-tags">
+                            <span>Python</span><span>FastAPI</span><span>REST APIs</span>
+                            <span>SQL</span><span>Linux</span><span>Docker</span>
+                            <span>Azure</span><span>React</span><span>AI Tools</span>
                         </div>
-                        <div class="experience-project">
-                            <h4><i class="fas fa-wand-magic-sparkles"></i> Legacy Modernization with Cursor AI</h4>
-                            <p>Led modernization of legacy JSP/JSV-based utility to a scalable architecture using React + FastAPI, leveraging <strong>Cursor AI</strong> for automated code transformation, refactoring, and API generation, reducing development effort by <strong>50%</strong>.</p>
-                        </div>
-                        <div class="experience-project">
-                            <h4><i class="fas fa-terminal"></i> Production Automation Scripts</h4>
-                            <p>Engineered production-grade automation scripts for log monitoring, backup management, and system health checks using Linux and Python.</p>
-                        </div>
-                        <div class="experience-project">
-                            <h4><i class="fas fa-brain"></i> LLM-based Workflows</h4>
-                            <p>Applied LLM-based workflows using OpenAI APIs and Cursor AI to automate debugging, log analysis, and code generation, improving engineering productivity.</p>
-                        </div>
+                        <ul class="timeline-details">
+                            <li>Built automated data analysis and monitoring pipelines using Python, improving root-cause analysis speed by <strong>40%</strong>.</li>
+                            <li>Developed backend automation utilities and API-driven enterprise solutions for service provisioning workflows.</li>
+                            <li>Engineered scalable backend orchestration systems for enterprise workflow automation.</li>
+                            <li>Designed Linux automation scripts for monitoring, log analysis, backups, and health checks.</li>
+                            <li>Leveraged Generative AI tools, LLM workflows, and prompt engineering for debugging and engineering acceleration.</li>
+                            <li>Applied AI-assisted development tools such as <strong>Cursor</strong>, <strong>Claude</strong>, and LLM copilots.</li>
+                        </ul>
                     </div>
                 </div>
 
                 <!-- SDE -->
-                <div class="experience-item">
-                    <div class="experience-header">
-                        <div class="experience-company">
-                            <h3>Jio Platforms Ltd.</h3>
-                            <span class="experience-role">Software Development Engineer</span>
-                            <span class="experience-period">Feb 2024 – June 2024</span>
-                            <span class="experience-mode">Navi Mumbai</span>
-                        </div>
-                        <div class="tech-stack">
-                            <span>Python</span><span>REST APIs</span><span>React</span><span>SQL</span>
-                        </div>
+                <div class="timeline-item reveal-up" data-tilt>
+                    <div class="timeline-marker">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-line"></div>
                     </div>
-                    <div class="experience-content">
-                        <div class="experience-project">
-                            <h4><i class="fas fa-cogs"></i> Backend Services & REST APIs</h4>
-                            <p>Developed backend services and REST APIs for monitoring distributed systems and service request workflows.</p>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <div>
+                                <h3 class="timeline-role">Software Development Engineer</h3>
+                                <span class="timeline-company">Jio Platforms Ltd.</span>
+                            </div>
+                            <span class="timeline-date">Feb 2024 — Jun 2024</span>
                         </div>
-                        <div class="experience-project">
-                            <h4><i class="fas fa-bell"></i> Background Processing Systems</h4>
-                            <p>Built background processing systems for handling alarms, alerts, and production monitoring.</p>
+                        <div class="timeline-tags">
+                            <span>Python</span><span>FastAPI</span><span>REST APIs</span>
+                            <span>SQL</span><span>React</span><span>AI Tooling</span>
                         </div>
-                        <div class="experience-project">
-                            <h4><i class="fas fa-globe"></i> Internal Web Utilities</h4>
-                            <p>Developed multiple internal web utilities integrated with backend APIs and deployed in production.</p>
-                        </div>
-                        <div class="experience-achievements">
-                            <h4><i class="fas fa-chart-line"></i> Automation & Efficiency</h4>
-                            <ul>
-                                <li>Automated reporting pipelines improving defect visibility and operational efficiency.</li>
-                            </ul>
-                        </div>
+                        <ul class="timeline-details">
+                            <li>Developed backend systems for monitoring service requests, production alerts, and issue tracking workflows.</li>
+                            <li>Built RESTful backend APIs and utility applications supporting production engineering workflows.</li>
+                            <li>Automated operational processes using Python scripts and backend integrations.</li>
+                            <li>Applied AI-assisted coding workflows to improve debugging and delivery speed.</li>
+                        </ul>
                     </div>
                 </div>
 
                 <!-- GET -->
-                <div class="experience-item">
-                    <div class="experience-header">
-                        <div class="experience-company">
-                            <h3>Jio Platforms Ltd.</h3>
-                            <span class="experience-role">Graduate Engineer Trainee (GET)</span>
-                            <span class="experience-period">Dec 2023 – Feb 2024</span>
-                            <span class="experience-mode">Navi Mumbai</span>
-                        </div>
-                        <div class="tech-stack">
-                            <span>Python</span><span>FastAPI</span><span>React</span>
-                        </div>
+                <div class="timeline-item reveal-up" data-tilt>
+                    <div class="timeline-marker">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-line"></div>
                     </div>
-                    <div class="experience-content">
-                        <div class="experience-project">
-                            <h4><i class="fas fa-project-diagram"></i> Defect Monitoring Dashboard</h4>
-                            <p>Developed real-time Defect Monitoring Dashboard using React and FastAPI.</p>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <div>
+                                <h3 class="timeline-role">Graduate Engineer Trainee</h3>
+                                <span class="timeline-company">Jio Platforms Ltd.</span>
+                            </div>
+                            <span class="timeline-date">Dec 2023 — Feb 2024</span>
                         </div>
-                        <div class="experience-achievements">
-                            <h4><i class="fas fa-tools"></i> Backend & Monitoring</h4>
-                            <ul>
-                                <li>Built backend APIs and automation scripts for system monitoring.</li>
-                                <li>Supported L2 production monitoring including log analysis and issue resolution.</li>
-                            </ul>
+                        <div class="timeline-tags">
+                            <span>Python</span><span>REST APIs</span><span>SQL</span>
+                            <span>React</span><span>Monitoring Tools</span>
                         </div>
+                        <ul class="timeline-details">
+                            <li>Built monitoring dashboards and backend support utilities for defect tracking and operational visibility.</li>
+                            <li>Assisted in API development, automation scripting, and production monitoring workflows.</li>
+                        </ul>
                     </div>
                 </div>
 
-                <!-- Analyst at eClerx -->
-                <div class="experience-item">
-                    <div class="experience-header">
-                        <div class="experience-company">
-                            <h3>eClerx Services Ltd.</h3>
-                            <span class="experience-role">Analyst</span>
-                            <span class="experience-period">Jul 2023 – Dec 2023</span>
-                            <span class="experience-mode">Chandigarh</span>
-                        </div>
+                <!-- Analyst -->
+                <div class="timeline-item reveal-up" data-tilt>
+                    <div class="timeline-marker">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-line"></div>
                     </div>
-                    <div class="experience-content">
-                        <div class="experience-project">
-                            <h4><i class="fas fa-chart-line"></i> Automated Reporting Workflows</h4>
-                            <p>Automated reporting workflows using Python, reducing manual effort by <strong>30%</strong>.</p>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <div>
+                                <h3 class="timeline-role">Analyst</h3>
+                                <span class="timeline-company">eClerx Services Ltd.</span>
+                            </div>
+                            <span class="timeline-date">Jul 2023 — Dec 2023</span>
                         </div>
-                        <div class="experience-project">
-                            <h4><i class="fas fa-database"></i> Data Validation & Pipelines</h4>
-                            <p>Performed large-scale data validation and analysis across enterprise datasets. Built structured data pipelines improving reporting accuracy and SLA adherence.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Internship at HighRadius -->
-                <div class="experience-item">
-                    <div class="experience-header">
-                        <div class="experience-company">
-                            <h3>HighRadius</h3>
-                            <span class="experience-role">Software Engineer Intern</span>
-                            <span class="experience-period">Jun 2022 – Dec 2022</span>
-                            <span class="experience-mode">Remote</span>
-                        </div>
-                    </div>
-                    <div class="experience-content">
-                        <div class="experience-project">
-                            <h4><i class="fas fa-code"></i> Backend Modules & Automation</h4>
-                            <p>Developed backend modules and automation scripts using Python.</p>
-                        </div>
-                        <div class="experience-achievements">
-                            <h4><i class="fas fa-sync-alt"></i> Agile Development</h4>
-                            <ul>
-                                <li>Assisted in debugging, testing, and optimizing application performance.</li>
-                                <li>Contributed in Agile-based development environment.</li>
-                            </ul>
-                        </div>
+                        <ul class="timeline-details">
+                            <li>Automated reporting workflows using Python, reducing manual effort by <strong>30%</strong>.</li>
+                            <li>Performed data validation, analysis, and structured processing workflows.</li>
+                        </ul>
                     </div>
                 </div>
 
+                <!-- Intern -->
+                <div class="timeline-item reveal-up" data-tilt>
+                    <div class="timeline-marker">
+                        <div class="timeline-dot"></div>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <div>
+                                <h3 class="timeline-role">Software Engineer Intern</h3>
+                                <span class="timeline-company">HighRadius</span>
+                            </div>
+                            <span class="timeline-date">Jun 2022 — Dec 2022</span>
+                        </div>
+                        <ul class="timeline-details">
+                            <li>Developed backend modules, data processing utilities, and automation scripts.</li>
+                            <li>Assisted in backend debugging, testing, API integrations, and optimization.</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Education Section -->
-    <section id="education" class="education">
+    <section id="education" class="section education-section">
         <div class="container">
-            <h2 class="section-title">Education</h2>
-            <div class="education-timeline">
-                <!-- MBA -->
-                <div class="education-item">
-                    <div class="education-icon">
-                        <img src="https://upload.wikimedia.org/wikipedia/en/thumb/4/4a/Chandigarh_University_logo.png/220px-Chandigarh_University_logo.png" alt="Chandigarh University" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                        <div class="education-icon-fallback" style="display:none;">
-                            <i class="fas fa-university"></i>
-                        </div>
-                    </div>
-                    <div class="education-content">
-                        <div class="education-header">
-                            <h3>MBA in Data Science and Artificial Intelligence</h3>
-                            <span class="education-institution">Chandigarh University</span>
-                            <span class="education-period">Expected 2027</span>
-                            <span class="education-cgpa">GPA: 9.02</span>
-                            <span class="education-status">Pursuing</span>
+            <div class="section-header">
+                <span class="section-label reveal-text"><span>03 / EDUCATION</span></span>
+                <h2 class="section-title reveal-text"><span>Academic Background</span></h2>
+            </div>
+            <div class="education-grid">
+                <div class="edu-card reveal-up" data-tilt>
+                    <div class="edu-icon"><i class="fas fa-graduation-cap"></i></div>
+                    <div class="edu-info">
+                        <h3>MBA in Data Science &amp; AI</h3>
+                        <span class="edu-school">Chandigarh University</span>
+                        <div class="edu-meta">
+                            <span class="edu-badge edu-pursuing">Pursuing</span>
+                            <span class="edu-badge">Expected 2027</span>
                         </div>
                     </div>
                 </div>
-
-                <!-- B.E. -->
-                <div class="education-item">
-                    <div class="education-icon">
-                        <img src="https://upload.wikimedia.org/wikipedia/en/thumb/4/4a/Chandigarh_University_logo.png/220px-Chandigarh_University_logo.png" alt="Chandigarh University" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                        <div class="education-icon-fallback" style="display:none;">
-                            <i class="fas fa-university"></i>
-                        </div>
-                    </div>
-                    <div class="education-content">
-                        <div class="education-header">
-                            <h3>Bachelor of Engineering in Computer Science</h3>
-                            <span class="education-institution">Chandigarh University</span>
-                            <span class="education-period">2023</span>
-                            <span class="education-cgpa">Percentage: 77.7%</span>
+                <div class="edu-card reveal-up" data-tilt>
+                    <div class="edu-icon"><i class="fas fa-university"></i></div>
+                    <div class="edu-info">
+                        <h3>B.Tech in Computer Science Engineering</h3>
+                        <span class="edu-school">Chandigarh University</span>
+                        <div class="edu-meta">
+                            <span class="edu-badge">2023</span>
                         </div>
                     </div>
                 </div>
@@ -327,60 +342,97 @@
     </section>
 
     <!-- Skills Section -->
-    <section id="skills" class="skills">
+    <section id="skills" class="section skills-section">
         <div class="container">
-            <h2 class="section-title">Skills & Technologies</h2>
+            <div class="section-header">
+                <span class="section-label reveal-text"><span>04 / SKILLS</span></span>
+                <h2 class="section-title reveal-text"><span>Tech Stack</span></h2>
+            </div>
             <div class="skills-grid">
-                <div class="skill-category">
-                    <h3><i class="fas fa-code"></i> Programming</h3>
-                    <div class="skill-items">
-                        <span class="skill-tag">Python (Primary)</span>
-                        <span class="skill-tag">SQL</span>
+                <div class="skill-card reveal-up" data-tilt>
+                    <div class="skill-card-icon"><i class="fas fa-code"></i></div>
+                    <h3>Programming</h3>
+                    <div class="skill-pills">
+                        <span>Python (Primary)</span>
+                        <span>SQL</span>
+                        <span>Java</span>
                     </div>
                 </div>
-                <div class="skill-category">
-                    <h3><i class="fas fa-server"></i> Backend</h3>
-                    <div class="skill-items">
-                        <span class="skill-tag">FastAPI</span>
-                        <span class="skill-tag">REST APIs</span>
-                        <span class="skill-tag">Microservices</span>
-                        <span class="skill-tag">API Design</span>
+                <div class="skill-card reveal-up" data-tilt>
+                    <div class="skill-card-icon"><i class="fas fa-server"></i></div>
+                    <h3>Backend Development</h3>
+                    <div class="skill-pills">
+                        <span>FastAPI</span>
+                        <span>Flask</span>
+                        <span>REST APIs</span>
+                        <span>Microservices</span>
                     </div>
                 </div>
-                <div class="skill-category">
-                    <h3><i class="fas fa-database"></i> Databases</h3>
-                    <div class="skill-items">
-                        <span class="skill-tag">MySQL</span>
-                        <span class="skill-tag">SQLite</span>
-                        <span class="skill-tag">Neo4j</span>
+                <div class="skill-card reveal-up" data-tilt>
+                    <div class="skill-card-icon"><i class="fas fa-brain"></i></div>
+                    <h3>AI / Generative AI</h3>
+                    <div class="skill-pills">
+                        <span>OpenAI API</span>
+                        <span>LangChain</span>
+                        <span>RAG</span>
+                        <span>Prompt Engineering</span>
+                        <span>LLM Integration</span>
+                        <span>Hugging Face</span>
                     </div>
                 </div>
-                <div class="skill-category">
-                    <h3><i class="fas fa-tools"></i> DevOps & Tools</h3>
-                    <div class="skill-items">
-                        <span class="skill-tag">Docker</span>
-                        <span class="skill-tag">Git</span>
-                        <span class="skill-tag">CI/CD</span>
-                        <span class="skill-tag">Linux</span>
-                        <span class="skill-tag">Azure</span>
+                <div class="skill-card reveal-up" data-tilt>
+                    <div class="skill-card-icon"><i class="fas fa-project-diagram"></i></div>
+                    <h3>Vector Databases</h3>
+                    <div class="skill-pills">
+                        <span>ChromaDB</span>
+                        <span>FAISS</span>
+                        <span>Vector Search</span>
                     </div>
                 </div>
-                <div class="skill-category">
-                    <h3><i class="fas fa-brain"></i> Generative AI</h3>
-                    <div class="skill-items">
-                        <span class="skill-tag">OpenAI APIs</span>
-                        <span class="skill-tag">Prompt Engineering</span>
-                        <span class="skill-tag">LLM Integration</span>
-                        <span class="skill-tag">Cursor AI</span>
-                        <span class="skill-tag">AI Agents</span>
+                <div class="skill-card reveal-up" data-tilt>
+                    <div class="skill-card-icon"><i class="fas fa-desktop"></i></div>
+                    <h3>Frontend</h3>
+                    <div class="skill-pills">
+                        <span>React (Basic)</span>
+                        <span>JSP</span>
                     </div>
                 </div>
-                <div class="skill-category">
-                    <h3><i class="fas fa-chart-line"></i> Libraries</h3>
-                    <div class="skill-items">
-                        <span class="skill-tag">Pandas</span>
-                        <span class="skill-tag">NumPy</span>
-                        <span class="skill-tag">Matplotlib</span>
+                <div class="skill-card reveal-up" data-tilt>
+                    <div class="skill-card-icon"><i class="fas fa-database"></i></div>
+                    <h3>Databases</h3>
+                    <div class="skill-pills">
+                        <span>MySQL</span>
+                        <span>SQLite</span>
+                        <span>Neo4j</span>
+                    </div>
+                </div>
+                <div class="skill-card reveal-up" data-tilt>
+                    <div class="skill-card-icon"><i class="fas fa-cloud"></i></div>
+                    <h3>Cloud / DevOps</h3>
+                    <div class="skill-pills">
+                        <span>Docker</span>
+                        <span>Git</span>
+                        <span>CI/CD</span>
+                        <span>Linux</span>
+                        <span>Azure</span>
+                    </div>
+                </div>
+                <div class="skill-card reveal-up" data-tilt>
+                    <div class="skill-card-icon"><i class="fas fa-chart-line"></i></div>
+                    <h3>Monitoring / Automation</h3>
+                    <div class="skill-pills">
+                        <span>Logging</span>
+                        <span>Production Monitoring</span>
+                        <span>Automation Scripting</span>
+                    </div>
+                </div>
+                <div class="skill-card reveal-up" data-tilt>
+                    <div class="skill-card-icon"><i class="fas fa-wand-magic-sparkles"></i></div>
+                    <h3>AI Productivity Engineering</h3>
+                    <div class="skill-pills">
+                        <span>Cursor AI</span>
+                        <span>Claude AI</span>
+                        <span>AI Debugging</span>
                     </div>
                 </div>
             </div>
@@ -388,167 +440,147 @@
     </section>
 
     <!-- Projects Section -->
-    <section id="projects" class="projects">
+    <section id="projects" class="section projects-section">
         <div class="container">
-            <h2 class="section-title">Featured Projects</h2>
+            <div class="section-header">
+                <span class="section-label reveal-text"><span>05 / PROJECTS</span></span>
+                <h2 class="section-title reveal-text"><span>Featured Work</span></h2>
+            </div>
             <div class="projects-grid">
-
-                <div class="project-card">
-                    <div class="project-image">
-                        <i class="fas fa-brain"></i>
-                    </div>
-                    <div class="project-content">
-                        <h3>AI-Powered Developer Assistant</h3>
-                        <p>Built an LLM-powered developer assistant capable of generating code, debugging suggestions, and documentation summaries. Designed REST APIs for seamless integration into engineering workflows. Applied advanced prompt engineering techniques to improve response accuracy and relevance.</p>
-                        <div class="project-tech">
-                            <span>Python</span>
-                            <span>FastAPI</span>
-                            <span>OpenAI APIs</span>
-                        </div>
+                <div class="project-card reveal-up" data-tilt>
+                    <div class="project-card-glow"></div>
+                    <div class="project-number">01</div>
+                    <div class="project-icon"><i class="fas fa-brain"></i></div>
+                    <h3>Enterprise AI Developer Assistant</h3>
+                    <p>Built an AI-powered developer assistant for code generation, debugging, documentation, and engineering productivity. Integrated OpenAI APIs with prompt engineering workflows. Developed FastAPI backend services for LLM interaction and workflow orchestration.</p>
+                    <div class="project-tech-pills">
+                        <span>Python</span><span>FastAPI</span><span>OpenAI API</span>
+                        <span>LangChain</span><span>Vector DB</span><span>Prompt Engineering</span>
                     </div>
                 </div>
-
-                <div class="project-card">
-                    <div class="project-image">
-                        <i class="fas fa-file-waveform"></i>
-                    </div>
-                    <div class="project-content">
-                        <h3>AI Log Analyzer for Production Systems</h3>
-                        <p>Developed AI-based log analysis system to detect error patterns from large-scale production logs. Automated root-cause summarization using LLM-driven workflows. Enabled natural language querying of logs via FastAPI endpoints.</p>
-                        <div class="project-tech">
-                            <span>Python</span>
-                            <span>LLM APIs</span>
-                            <span>NLP</span>
-                        </div>
+                <div class="project-card reveal-up" data-tilt>
+                    <div class="project-card-glow"></div>
+                    <div class="project-number">02</div>
+                    <div class="project-icon"><i class="fas fa-chart-line"></i></div>
+                    <h3>AI Log Analyzer &amp; Incident Intelligence Platform</h3>
+                    <p>Developed intelligent log analysis platform for automated production incident diagnosis. Built RAG-based contextual analysis pipeline using vector embeddings and semantic retrieval. Automated root-cause summarization using LLM workflows and AI reasoning.</p>
+                    <div class="project-tech-pills">
+                        <span>Python</span><span>LLM APIs</span><span>FastAPI</span>
+                        <span>RAG</span><span>ChromaDB</span><span>Vector Search</span>
                     </div>
                 </div>
-
-                <div class="project-card">
-                    <div class="project-image">
-                        <i class="fas fa-robot"></i>
-                    </div>
-                    <div class="project-content">
-                        <h3>Task Automation System</h3>
-                        <p>Built automation system to eliminate repetitive operational workflows. Designed optimized database schemas improving performance and efficiency.</p>
-                        <div class="project-tech">
-                            <span>Python</span>
-                            <span>MySQL</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-image">
-                        <i class="fas fa-chart-pie"></i>
-                    </div>
-                    <div class="project-content">
-                        <h3>Data Analytics Dashboard</h3>
-                        <p>Developed analytics dashboard for data visualization and insights generation. Performed data cleaning, transformation, and exploratory analysis.</p>
-                        <div class="project-tech">
-                            <span>Python</span>
-                            <span>Pandas</span>
-                            <span>Matplotlib</span>
-                        </div>
-                    </div>
-                </div>
-
             </div>
         </div>
     </section>
 
     <!-- Certifications Section -->
-    <section id="certifications" class="certifications">
+    <section id="certifications" class="section certifications-section">
         <div class="container">
-            <h2 class="section-title">Certifications</h2>
-            <div class="certifications-grid">
-                <div class="certification-card">
-                    <div class="certification-icon">
-                        <i class="fab fa-google"></i>
+            <div class="section-header">
+                <span class="section-label reveal-text"><span>06 / CERTIFICATIONS</span></span>
+                <h2 class="section-title reveal-text"><span>Credentials</span></h2>
+            </div>
+            <div class="certs-grid">
+                <div class="cert-card reveal-up" data-tilt>
+                    <div class="cert-icon"><i class="fab fa-google"></i></div>
+                    <div class="cert-info">
+                        <h3>Google Cloud Platform Certification</h3>
+                        <span>Jio Internal</span>
                     </div>
-                    <div class="certification-content">
-                        <h3>Google Cloud Platform Professional Certification</h3>
-                        <p class="certification-issuer">Jio & Google Cloud</p>
-                    </div>
+                    <div class="cert-arrow"><i class="fas fa-arrow-right"></i></div>
                 </div>
-
-                <div class="certification-card">
-                    <div class="certification-icon">
-                        <i class="fas fa-infinity"></i>
-                    </div>
-                    <div class="certification-content">
+                <div class="cert-card reveal-up" data-tilt>
+                    <div class="cert-icon"><i class="fas fa-infinity"></i></div>
+                    <div class="cert-info">
                         <h3>DevOps Foundations</h3>
-                        <p class="certification-issuer">DevOps</p>
+                        <span>DevOps</span>
                     </div>
+                    <div class="cert-arrow"><i class="fas fa-arrow-right"></i></div>
                 </div>
-
-                <div class="certification-card">
-                    <div class="certification-icon">
-                        <i class="fas fa-robot"></i>
-                    </div>
-                    <div class="certification-content">
+                <div class="cert-card reveal-up" data-tilt>
+                    <div class="cert-icon"><i class="fas fa-robot"></i></div>
+                    <div class="cert-info">
                         <h3>Prompt Engineering for Generative AI</h3>
-                        <p class="certification-issuer">Generative AI</p>
+                        <span>Generative AI</span>
                     </div>
+                    <div class="cert-arrow"><i class="fas fa-arrow-right"></i></div>
                 </div>
-
-                <div class="certification-card">
-                    <div class="certification-icon">
-                        <i class="fas fa-laptop-code"></i>
-                    </div>
-                    <div class="certification-content">
+                <div class="cert-card reveal-up" data-tilt>
+                    <div class="cert-icon"><i class="fas fa-laptop-code"></i></div>
+                    <div class="cert-info">
                         <h3>Cursor AI Developer Certification</h3>
-                        <p class="certification-issuer">Cursor AI</p>
+                        <span>Cursor AI</span>
                     </div>
+                    <div class="cert-arrow"><i class="fas fa-arrow-right"></i></div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="contact">
+    <section id="contact" class="section contact-section">
         <div class="container">
-            <h2 class="section-title">Get In Touch</h2>
-            <p class="contact-subtitle">I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision.</p>
-            <div class="contact-content">
-                <div class="contact-info">
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-envelope"></i>
-                        </div>
-                        <div class="contact-details">
-                            <h3>Email</h3>
-                            <a href="mailto:19BCS2408@gmail.com">19BCS2408@gmail.com</a>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-map-marker-alt"></i>
-                        </div>
-                        <div class="contact-details">
-                            <h3>Location</h3>
-                            <p>Navi Mumbai, India</p>
+            <div class="section-header">
+                <span class="section-label reveal-text"><span>07 / CONTACT</span></span>
+                <h2 class="section-title contact-title reveal-text"><span>Let's Build</span></h2>
+                <h2 class="section-title contact-title reveal-text"><span>Something Great</span></h2>
+            </div>
+            <p class="contact-lead reveal-up">I'm always open to discussing new projects, creative ideas, or opportunities.</p>
+            <div class="contact-grid">
+                <div class="contact-info-col reveal-up">
+                    <div class="contact-card" data-tilt>
+                        <div class="contact-card-icon"><i class="fas fa-envelope"></i></div>
+                        <div>
+                            <span class="contact-card-label">Email</span>
+                            <a href="mailto:19BCS2408@gmail.com" class="contact-card-value">19BCS2408@gmail.com</a>
                         </div>
                     </div>
-                    <div class="social-links-large">
-                        <a href="https://www.linkedin.com/in/nitin-singh-samant-1a4227301" target="_blank" rel="noopener noreferrer" class="social-link-large">
-                            <i class="fab fa-linkedin"></i>
+                    <div class="contact-card" data-tilt>
+                        <div class="contact-card-icon"><i class="fab fa-linkedin-in"></i></div>
+                        <div>
+                            <span class="contact-card-label">LinkedIn</span>
+                            <a href="https://www.linkedin.com/in/nitin-singh-samant-1a4227301" target="_blank" rel="noopener noreferrer" class="contact-card-value contact-card-link">www.linkedin.com/in/nitin-singh-samant-1a4227301</a>
+                        </div>
+                    </div>
+                    <div class="contact-card" data-tilt>
+                        <div class="contact-card-icon"><i class="fas fa-map-marker-alt"></i></div>
+                        <div>
+                            <span class="contact-card-label">Location</span>
+                            <span class="contact-card-value">Navi Mumbai, India</span>
+                        </div>
+                    </div>
+                    <div class="contact-socials">
+                        <a href="https://www.linkedin.com/in/nitin-singh-samant-1a4227301" target="_blank" rel="noopener noreferrer" class="contact-social-link" data-magnetic>
+                            <i class="fab fa-linkedin-in"></i>
                         </a>
                     </div>
                 </div>
                 <form class="contact-form" id="contactForm">
-                    <div class="form-group">
-                        <input type="text" id="name" name="name" placeholder="Your Name" required>
+                    <div class="form-row reveal-up">
+                        <div class="form-field">
+                            <input type="text" id="name" name="name" placeholder=" " required>
+                            <label for="name">Your Name</label>
+                            <div class="field-line"></div>
+                        </div>
+                        <div class="form-field">
+                            <input type="email" id="email" name="email" placeholder=" " required>
+                            <label for="email">Your Email</label>
+                            <div class="field-line"></div>
+                        </div>
                     </div>
-                    <div class="form-group">
-                        <input type="email" id="email" name="email" placeholder="Your Email" required>
+                    <div class="form-field reveal-up">
+                        <input type="text" id="subject" name="subject" placeholder=" " required>
+                        <label for="subject">Subject</label>
+                        <div class="field-line"></div>
                     </div>
-                    <div class="form-group">
-                        <input type="text" id="subject" name="subject" placeholder="Subject" required>
+                    <div class="form-field reveal-up">
+                        <textarea id="message" name="message" rows="4" placeholder=" " required></textarea>
+                        <label for="message">Message</label>
+                        <div class="field-line"></div>
                     </div>
-                    <div class="form-group">
-                        <textarea id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-primary">Send Message</button>
+                    <button type="submit" class="btn-magnetic btn-submit reveal-up" data-magnetic>
+                        <span class="btn-text"><i class="fas fa-paper-plane"></i> Send Message</span>
+                    </button>
                 </form>
             </div>
         </div>
@@ -557,8 +589,10 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2026 Nitin Singh Samant. All Rights Reserved.</p>
-            <p>Built with <i class="fas fa-heart"></i> using Python & Modern Web Technologies</p>
+            <div class="footer-content">
+                <span class="footer-logo">NS</span>
+                <p>&copy; 2026 Nitin Singh Samant. Crafted with precision.</p>
+            </div>
         </div>
     </footer>
 
