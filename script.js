@@ -291,11 +291,11 @@
             formData.append('email', email);
             formData.append('subject', subject);
             formData.append('message', message);
-            formData.append('_to', '19BCS2408@gmail.com');
+            formData.append('_to', 'NitinSamant62@gmail.com');
             formData.append('_subject', `Portfolio Contact: ${subject}`);
             formData.append('_template', 'table');
 
-            fetch('https://formsubmit.co/ajax/19BCS2408@gmail.com', {
+            fetch('https://formsubmit.co/ajax/NitinSamant62@gmail.com', {
                 method: 'POST',
                 body: formData,
                 headers: { 'Accept': 'application/json' }
@@ -322,7 +322,7 @@
                         from_email: email,
                         subject: subject,
                         message: message,
-                        to_email: '19BCS2408@gmail.com'
+                        to_email: 'NitinSamant62@gmail.com'
                     }, publicKey)
                     .then(() => {
                         hideLoading(submitButton, originalButtonText);
@@ -340,11 +340,11 @@
 
         function mailtoFallback(name, email, subject, message, submitButton, originalButtonText) {
             hideLoading(submitButton, originalButtonText);
-            const mailto = `mailto:19BCS2408@gmail.com?subject=${encodeURIComponent(`Portfolio: ${subject}`)}&body=${encodeURIComponent(`From: ${name}\nEmail: ${email}\n\n${message}`)}`;
+            const mailto = `mailto:NitinSamant62@gmail.com?subject=${encodeURIComponent(`Portfolio: ${subject}`)}&body=${encodeURIComponent(`From: ${name}\nEmail: ${email}\n\n${message}`)}`;
             if (confirm('Unable to send automatically. Open your email client?')) {
                 window.location.href = mailto;
             } else {
-                showMessage('error', 'Failed to send. Please email me directly at 19BCS2408@gmail.com');
+                showMessage('error', 'Failed to send. Please email me directly at NitinSamant62@gmail.com');
             }
         }
     }
